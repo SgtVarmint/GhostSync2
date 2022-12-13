@@ -21,6 +21,9 @@ p,h1.h2.h3,h4,div{
     font-family: 'Roboto';font-size: 1.2rem;
     letter-spacing: 1.2px;
 }
+h3{
+    font-weight: 1rem;
+}
 .button {
     align-items: center;
     background: var(--text);
@@ -44,6 +47,14 @@ p,h1.h2.h3,h4,div{
     white-space: nowrap;
     cursor: pointer;
 }
+.hidden {
+    display: none;
+}
+.primaryBackground {
+    background-color: var(--primary);
+}
+
+
 
 
 /**
@@ -76,19 +87,6 @@ Index/ login screen
 
 
 
-.hidden {
-    display: none;
-}
-
-
-
-
-.primaryBackground {
-    background-color: var(--primary);
-}
-
-
-
 #joinArea,
 #joinBox ,
 #authInside{
@@ -101,9 +99,14 @@ Index/ login screen
     padding: 1%;
     overflow: hidden;
 }
-#lobbyInput, #userInput{
+#lobbyInput, #userInput, #authText{
     height: 3rem;
     font-size: 1.5rem;
+    margin: 1% 0 ;
+    display: inline;
+}
+#authTitle{
+margin: 2% 0 ;
 }
 .createJoinButton{
     margin: 2.5% 0;

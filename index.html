@@ -8,7 +8,7 @@
 	<script src="/Scripts/theme-change.js"></script>
 	<script src="/Scripts/AuthSlider.js"></script>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	
+
 </head>
 
 <body class="primaryBackground">
@@ -22,25 +22,32 @@
 	<div id="mainWrapper">
 		<div id="joinArea">
 			<div id="joinBox">
-				<div id = "nameLobby">Lobby: <input type="text" id="lobbyInput"></div>
-				<div id = "userLobby">Username: <input type="text" id="userInput"></div>
+				<div id="nameLobby">
+					<h3>Lobby: <input type="text" id="lobbyInput"></h3>
+				</div>
+				<div id="userLobby">
+					<h3>Username: <input type="text" id="userInput"></h3>
+				</div>
 				<button id="lobbyButton" class="button createJoinButton">Create/Join</button>
-				<button id ="authMenuButton" class="button setAuthButton" style="display: inline-;">Set Authentication Key</button>
+				<button id="authMenuButton" class="button setAuthButton" style="display: inline-;">Set Authentication
+					Key</button>
 			</div>
 			<div id="authMenu" class="hidden">
 				<!--Make this a box?-->
 				<div id="authInside">
-					<h3>Authentication Key</h3>
-					<div class="message"> <span id="authTip" class="toolTip"></span></span>&nbsp;<input id="authText"
-							type="text"></input><button class="button" id="authButton">Set</button> </div>
-	
+					<h3>Authentication Key:
+						<span id="authTip" class="toolTip"></span></span>&nbsp;<input id="authText"
+							type="text"></input><button class="button" id="authButton">Set</button>
+
+					</h3>
+
 				</div>
-	
+
 			</div>
 		</div>
 
 
-		
+
 
 		<button class="button" onclick="themeChanger()">Change background</button>
 
@@ -51,7 +58,7 @@
 
 	</div>
 
-	
+
 </body>
 
 </html>
