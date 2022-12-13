@@ -1,0 +1,121 @@
+/**
+
+Main css
+
+**/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #05771eb2;
+    --secondary: #263375;
+    --accent: #e75a18;
+    --text: #363537;
+    --accentOpas:#8f671e63; 
+}
+p,h1.h2.h3,h4,div{
+    font-family: 'Roboto';font-size: 1.2rem;
+    letter-spacing: 1.2px;
+}
+.button {
+    align-items: center;
+    background: var(--text);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: var(--accentOpas) 0 5px 3px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size:1.2em;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+
+/**
+
+Index/ login screen 
+
+**/
+
+#mainWrapper {
+    height: 70vh;
+}
+
+#heroIndex {
+    position: relative;
+    height: 25%;
+    text-align: left;
+    background-image: url('/Images/heroTemp.JPG');
+    background-position: center;
+    background-size: cover;
+}
+
+.heroText {
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    margin: 0px;
+    padding: 10px;
+    max-width: inherit;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+
+
+
+.primaryBackground {
+    background-color: var(--primary);
+}
+
+
+
+#joinArea,
+#joinBox ,
+#authInside{
+    background-color: var(--secondary);
+    color: white;
+    margin: 2% auto 0;
+    width: 60%;
+    border-radius:  15px;
+    box-shadow: var( --accentOpas) 0 15px 30px 5px;
+    padding: 1%;
+    overflow: hidden;
+}
+#lobbyInput, #userInput{
+    height: 3rem;
+    font-size: 1.5rem;
+}
+.createJoinButton{
+    margin: 2.5% 0;
+}
+.setAuthButton{
+    margin: 2% 0;
+}
+#nameLobby,
+#userLobby {
+    display: inline;
+    margin: 3%;
+    color: white;
+    font-size: 2em;
+    overflow: hidden;
+}
