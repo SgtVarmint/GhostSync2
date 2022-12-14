@@ -47,7 +47,7 @@
 </head>
 
 <body>
-	<div id="main_wrapper" class="main_desktop">
+	<div id="mainWrapper" class="mainDesktop">
 
 		<input type="hidden" id="currentDirectory" value="/"></input>
 		<input type="hidden" id="lobbyName" value="DefaultLobby"></input>
@@ -77,16 +77,16 @@
 			<a id="settingsButton" class="navButton" href="javascript:settingsButton();">Settings</a>
 		</div>
 
-		<h3 id="nowPlaying" class="nowPlaying_desktop">Nothing Is Playing Yet..</h3>
+		<h3 id="nowPlaying" class="nowPlayingDesktop">Nothing Is Playing Yet..</h3>
 
-		<div id="player" class="player_desktop">
+		<div id="player" class="playerDesktop">
 			<div id="reactionMenuContainer">
 				<div id="reactionMenuTop">
-					<div id="reactionMenuTop_Left">
+					<div id="reactionMenuTopLeft">
 						<button id="reactionMenuFavoritesButton">Favorites</span>
 							<button id="reactionMenuAllButton">All Emojis</span>
 					</div>
-					<div id="reactionMenuTop_Right">
+					<div id="reactionMenuTopRight">
 						<button id="closeReactionMenuButton">X</button>
 					</div>
 					<hr>
@@ -95,20 +95,20 @@
 				<div id="reactionMenuAll"></div>
 			</div>
 			<div id="reactionPanel"></div>
-			<video id="video" class="video_desktop video_standardscreen" preload="auto" controls>
+			<video id="video" class="videoDesktop videoStandardScreen" preload="auto" controls>
 				<source id="videoSource">
 			</video>
-			<div id="youtubePlayer" class="youtube_standardscreen">
+			<div id="youtubePlayer" class="youtubeStandardScreen">
 
 			</div>
 
-			<div id="subtitle_wrapper">
-				<div id="subtitleText" class="subtitleText_standardscreen"></div>
+			<div id="subtitleWrapper">
+				<div id="subtitleText" class="subtitleTextStandardScreen"></div>
 			</div>
 
-			<div class="reaction_wrapper">
+			<div class="reactionWrapper">
 				<button id="reactionButton" class="controls">&#x1F636;</button>
-				<button id="playButton" class="controls playButton_paused">&#x25b6;</button>
+				<button id="playButton" class="controls playButtonPaused">&#x25b6;</button>
 				<button id="fullscreenButton" class="controls">&#x26F6;</button>
 				<button id="skipButton" class="controls">&#x23e9;</button>
 				<button id="lockButton" class="controls">&#x1f512;</button>
@@ -120,9 +120,9 @@
 			<input id="seekSlider" type="range" step=".1" class="controls"></input>
 		</div>
 
-		<div id="userqueue_wrapper" class="userqueue_wrapper_desktop">
-			<div id="users_wrapper" class="users_wrapper_desktop">
-				<h3 id="user_title">Users In Lobby</h3>
+		<div id="userqueueWrapper" class="userqueueWrapperDesktop">
+			<div id="usersWrapper" class="usersWrapperDesktop">
+				<h3 id="userTitle">Users In Lobby</h3>
 				<div id="loader">
 					<div id="loader">
 						<div id='spinner'>
@@ -144,7 +144,7 @@
 				</div>
 			</div>
 
-			<div id="queueArea" class="queueArea_desktop">
+			<div id="queueArea" class="queueAreaDesktop">
 				<div id="queueHeader">
 					<h3 id="queue_title">Next Up...</h3>
 					<hr>
@@ -166,7 +166,7 @@
 		</div>
 		<div id="youtubeMenu">
 			<div class="youtubeMenuElement">
-				<span class="text_title">YouTube Link</span>
+				<span class="textTitle">YouTube Link</span>
 			</div>
 			<div class="youtubeMenuElement">
 				<input id="youtubeInput" type="text"></input>
@@ -177,7 +177,7 @@
 			</div>
 		</div>
 		<div id="settings">
-			<div class="setting_section">
+			<div class="settingSection">
 				<h3>Username&nbsp;<span id="usernameTip" class="toolTip">&#63;</span></h3>
 				<input type="text" id="userNameInput"></input><button id="changeUsernameButton"
 					class="defaultButton">Change
@@ -188,20 +188,20 @@
 
 			<hr>
 
-			<div class="setting_section">
+			<div class="settingSection">
 				<h3>Lobby Sounds&nbsp;<span id="soundsTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="lobbySoundsToggle"></input>
 			</div>
 
 			<hr>
 
-			<div class="setting_section">
+			<div class="settingSection">
 				<h3>Reactions&nbsp;<span id="reactionsTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="reactionsToggle"></input>
 			</div>
 			<hr>
 
-			<div class="setting_section">
+			<div class="settingSection">
 				<h3>Sync Tolerance&nbsp;<span id="toleranceTip" class="toolTip">&#63;</span></h3>
 				<input type="range" id="toleranceSlider"></input>
 				<div>
@@ -211,7 +211,7 @@
 
 			<hr>
 
-			<div class="setting_section">
+			<div class="settingSection">
 				<h3>Slow Connection&nbsp;<span id="slowConnectionTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="jimmyToggle"></input>
 			</div>

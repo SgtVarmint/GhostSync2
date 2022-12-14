@@ -1,6 +1,6 @@
-const focusAuthInput = () => 
+const toggleAuthField = () => 
 {
-    byID('auth').classList.remove('hidden');
+    byID('auth').classList.toggle('hidden');
     byID('authText').focus();
 }
 
@@ -29,9 +29,9 @@ const checkAuthorization = (response) =>
     } 
     else 
     {
-        toastMessage("Successfully Authenticated", 2, "body", "5%", "13%", "13%", "0")
-        byID('lobbyButton').onclick = lobbyButtonClick;
+        toastMessage("Successfully Authenticated", 2, "body", "5%", "13%", "13%", "0");
         byID('lobbyButton').disabled = false;
+        byID('lobbyButton').onclick = lobbyButtonClick;
         setLocal('auth', response.status);
         setLocal('access', byID('authText').value);
     }

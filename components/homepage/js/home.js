@@ -3,7 +3,7 @@ const init = () =>
     byID('lobbyInput').value = getLocal('lobbyName');
     byID('userInput').value = getLocal('userName');
     
-    byID('authNavBtn').onclick = focusAuthInput;
+    byID('authNavBtn').onclick = toggleAuthField;
     byID('authButton').onclick = authButtonClick;
 }
 
@@ -23,8 +23,7 @@ const lobbyButtonClick = () =>
 
     if(!getLocal('userId')) 
     {
-        addUserToList()
-        .then((response) => { return response.json() });
+        addUserToList();
     }
 
     redirect('components/lobby/lobby.html');

@@ -3,17 +3,32 @@
 		<meta charset="utf-8">
 		<!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />-->
 		<title>GhostSync: Synchronize Video Watching</title>
+		<link rel="stylesheet" href="/NewStyles.css"/>
+		<link rel="stylesheet" href="/components/tooltips/tooltips.css"/>
+		<style>
+			.doesthisbreak{
+				display: inline;
+				margin-left: 50px;
+			}
+
+		</style>
+
+		<script src="components/homepage/js/home.js"></script>
+		<script src="components/homepage/js/user.js"></script>
+		<script src="components/homepage/js/auth.js"></script>
+		<script src="components/toast/js/toast.js"></script>
 	</head>
 	<body>
-		<div id = "main_wrapper">
+		<div id = "mainWrapper">
 			<div id="topNav">
-				<a class="navButton" href="index.html" id="home">GhostSync</a>
+				<button class="navButton" href="index.html" id="home">GhostSync</button>
 				<span class="divider"></span>
-				<a class="navButton" href="javascript: authenticationButton();">Authentication</a>
+				<button class="navButton" id="authNavBtn">Authentication</button>
 			</div>
 			
 			<div id="auth" class = "hidden">
-				<span>Authentication Key&nbsp;<span id="authTip" class="toolTip">&#63;</span></span>&nbsp;<input id="authText" type="text"></input><button class="defaultButton" id="authButton">Set</button>
+				<span>Authentication Key&nbsp;<span id="authTip" class="toolTip">&#63;</span></span>&nbsp;
+				<input id="authText" type="text"></input><button class="defaultButton" id="authButton">Set</button>
 			</div>
 			
 			<div id="joinArea">
