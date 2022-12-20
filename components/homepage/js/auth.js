@@ -1,12 +1,12 @@
 const toggleAuthField = () => 
 {
-    byID('auth').classList.toggle('hidden');
+    byID('authMenu').classList.toggle('hidden');
     byID('authText').focus();
 }
 
 const defocusAuthInput = () => 
 {
-    byID('auth').classList.add('hidden');
+    byID('authMenu').classList.toggle('hidden');
 }
 
 const authenticate = async () =>

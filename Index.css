@@ -71,7 +71,7 @@ Index/ login screen
     position: relative;
     height: 25%;
     text-align: left;
-    background-image: url('/Images/heroTemp.JPG');
+    background-image: url('/graphics/heroTemp.JPG');
     background-position: center;
     background-size: cover;
 }

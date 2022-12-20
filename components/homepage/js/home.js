@@ -3,7 +3,7 @@ const init = () =>
     byID('lobbyInput').value = getLocal('lobbyName');
     byID('userInput').value = getLocal('userName');
     
-    byID('authNavBtn').onclick = toggleAuthField;
+    byID('authMenuButton').onclick = toggleAuthField;
     byID('authButton').onclick = authButtonClick;
 }
 
