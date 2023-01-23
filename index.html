@@ -14,39 +14,49 @@
 	<script src="components/homepage/js/auth.js"></script>
 	<script src="components/toast/js/toast.js"></script>
 </head>
-<body class="primaryBackground">
-	<!--Change the hero image before prod -->
-	<div id="heroIndex">
-		<h1 class="heroText">GhostSync</h1>
-	</div>
+
+<body>
 	<div id="mainWrapper">
 		<div id="joinArea">
 			<div id="joinBox">
+				<div id="header">
+					<h1 class=title>GhostSync</h1>
+					<p class="sub_Text">Enter a lobby name and your Username</p>
+				</div>
+
 				<div id="nameLobby">
-					<h3>Lobby: <input type="text" id="lobbyInput"></h3>
+					<p>Lobby:</p>
+					<input type="text" id="lobbyInput" placeholder="Lobby ID">
 				</div>
+
 				<div id="userLobby">
-					<h3>Username: <input type="text" id="userInput"></h3>
+					<p>Username: </p>
+					<input type="text" id="userInput" placeholder="Username">
 				</div>
+
+				<div id="authMenu" class="hidden">
+
+					<div id="authInside">
+						<p>Authentication Key:</p>
+						<span id="authTip" class="toolTip">
+						</span>&nbsp;
+						<input id="authText" type="text"  placeholder="Authentication Key"></input>
+						<button class="button" id="authButton">Set</button>
+					</div>
+				</div>
+
 				<button id="lobbyButton" class="button createJoinButton">Create/Join</button>
 				<button id="authMenuButton" class="button setAuthButton" style="display: inline-;">Set Authentication Key</button>
+
 			</div>
-			<div id="authMenu" class="hidden">
-				<!--Make this a box?-->
-				<div id="authInside">
-					<h3>Authentication Key:
-						<span id="authTip" class="toolTip"></span>&nbsp;
-						<input id="authText" type="text"></input>
-						<button class="button" id="authButton">Set</button>
-					</h3>
-				</div>
-			</div>
-		</div>
-		<button class="button" onclick="themeChanger()">Change background</button>
-		<div id="buildInfo">
-			<span class="label">GhostSync Version <span class="label" id="versionNumber">XXX</span>
-				<!--&nbsp;deployed on <span id="buildDate">XXX</span>-->
+
 		</div>
 	</div>
+
+	<div id="buildInfo">
+		<span class="label">GhostSync Version <span class="label" id="versionNumber">XXX</span>
+			<!--&nbsp;deployed on <span id="buildDate">XXX</span>-->
+	</div>
+
 </body>
 </html>
