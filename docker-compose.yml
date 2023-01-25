@@ -1,0 +1,16 @@
+services:
+  app:
+    image: httpd
+    ports:
+      - 9000:80
+    working_dir: /usr/local/apache2/htdocs/
+    volumes:
+      - type: bind
+        source: ./app
+        target: /usr/local/apache2/htdocs/
+      - type: bind
+        source: <path_to_video_directory>
+        target: /usr/local/apache2/htdocs/Videos/
+    environment:
+      - ACCESS_KEY=<access_key>
+      - VIDEO_ROOT=<server_video_root>
