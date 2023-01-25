@@ -18,4 +18,4 @@ In `docker-compose.yml`
 
 In the root directory of the project, you just have to run the following command: `docker-compose up -d`. This will start your docker container called `ghostsync2`.
 
-Then you're all good to go :-)
+At this point, the server will be accessible at `localhost:9000` (and, obviously, the port is modifiable so...)
