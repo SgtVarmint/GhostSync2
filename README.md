@@ -6,8 +6,10 @@
 
 
 # Setting up your dev environment with Docker
-In `docker-compose.yml`
-    <br>
+Copy `docker-compose-template.yml` to `docker-compose.yml` and set the following keys to the appropriate values. If you want access, message `SgtVarmint`. 
+
+(Also make sure `docker-compose.yml` is getting ignored by `.gitignore`.)
+
 - Ln 12: The source value is going to be the *absolute* path on your dev machine to the directory that holds your media (e.g C:\\Users\\Blowfish\\Videos).
 
 - *ACCESS_KEY* is going to be the authentication key that users will have to input to be able to gain access to the site itself.
