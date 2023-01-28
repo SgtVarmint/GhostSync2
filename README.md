@@ -1,6 +1,6 @@
 # GhostSync 2.0
 
-# Prerequisits
+# Prerequisites
 - [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) (At least for Windows)
     - You will also need WSL 2, but the above guide has resources on how to get that installed as well.
 
