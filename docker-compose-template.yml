@@ -1,4 +1,4 @@
-zservices:
+services:
   app:
     image: httpd
     ports:
