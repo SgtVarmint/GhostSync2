@@ -1,4 +1,4 @@
-services:
+zservices:
   app:
     image: httpd
     ports:
@@ -9,8 +9,8 @@ services:
         source: ./app
         target: /usr/local/apache2/htdocs/
       - type: bind
-        source: <path_to_video_directory>
+        source: <CLIENT_VIDEO_ROOT>
         target: /usr/local/apache2/htdocs/Videos/
     environment:
-      - ACCESS_KEY=<access_key>
-      - VIDEO_ROOT=<server_video_root>
+      - ACCESS_KEY=<SITE_ACCESS_KEY>
+      - VIDEO_ROOT=<SERVER_VIDEO_ROOT>
