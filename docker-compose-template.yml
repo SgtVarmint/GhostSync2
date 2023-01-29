@@ -9,7 +9,7 @@ services:
         source: ./app
         target: /usr/local/apache2/htdocs/
       - type: bind
-        source: <CLIENT_VIDEO_ROOT>
+        source: <MOUNTED_VIDEO_ROOT>
         target: /usr/local/apache2/htdocs/Videos/
     environment:
       - ACCESS_KEY=<SITE_ACCESS_KEY>

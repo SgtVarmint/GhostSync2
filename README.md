@@ -10,7 +10,7 @@ Copy `docker-compose-template.yml` to `docker-compose.yml` and set the following
 
 (Also make sure `docker-compose.yml` is getting ignored by `.gitignore`.)
 
-- Ln 12: The source value is going to be the *absolute* path on your dev machine to the directory that holds your media (e.g C:\\Users\\Blowfish\\Videos).
+- *MOUNTED_VIDEO_ROOT* is going to be the *absolute* path on your dev machine to the directory that holds your media (e.g C:\\Users\\Blowfish\\Videos).
 
 - *ACCESS_KEY* is going to be the authentication key that users will have to input to be able to gain access to the site itself.
 
@@ -18,6 +18,6 @@ Copy `docker-compose-template.yml` to `docker-compose.yml` and set the following
 
 # Running the server in Docker
 
-In the root directory of the project, you just have to run the following command: `docker-compose up -d`. This will start your docker container called `ghostsync2`.
+In the root directory of the project, you run the following command: `docker-compose up -d`. This will start your docker container called `ghostsync2`.
 
 At this point, the server will be accessible at `localhost:9000` (and, obviously, the port is modifiable so...)
