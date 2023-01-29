@@ -1,26 +1,11 @@
 <?php
 
-define('AUTHENTICATED_CODE', 'gs:YrehJb5njkXW1lm39yiF@');
+$userAccessCode = trim($_POST['accessCode']);
 
-$accessCode = trim($_POST['accessCode']);
-
-$myfile = fopen('/var/www/html/.acc', 'r') or die('Unable to open file!');
-$keyFile = fread($myfile, filesize('/var/www/html/.acc'));
-fclose($myfile);
-
-$accessStatus = 'denied';
-
-$keys = explode("\n", $keyFile);
-
-foreach ($keys as $key) {
-	if ($accessCode == trim($key))
-	{
-		$accessStatus = AUTHENTICATED_CODE;
-	}
-}
+$status = $userAccessCode == getenv('ACCESS_KEY') ? getenv('AUTHENTICATED_CODE') : 'denied';
 
 $return = [
-    'status' => $accessStatus
+    'status' => $status
 ];
 
 echo json_encode($return);

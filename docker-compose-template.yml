@@ -14,3 +14,4 @@ services:
     environment:
       - ACCESS_KEY=<SITE_ACCESS_KEY>
       - VIDEO_ROOT=<SERVER_VIDEO_ROOT>
+      - AUTHENTICATED_CODE=<AUTHENTICATED_CODE>
