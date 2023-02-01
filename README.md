@@ -6,7 +6,7 @@
 
 
 # Setting up your dev environment with Docker
-Copy `docker-compose-template.yml` to `docker-compose.yml` and set the following keys to the appropriate values. If you want access, message `SgtVarmint`. 
+Copy `docker-compose-template.yml` to `docker-compose.yml` and set the following keys to the appropriate values. If you need an access key, message `SgtVarmint`. 
 
 (Also make sure `docker-compose.yml` is getting ignored by `.gitignore`.)
 
