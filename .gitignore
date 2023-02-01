@@ -1,4 +1,3 @@
-.acc
-.env
-data/
-lobbies/
+app/data/
+app/lobbies/
+docker-compose.yml

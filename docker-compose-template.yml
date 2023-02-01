@@ -1,0 +1,17 @@
+services:
+  app:
+    image: php:8.0-apache
+    ports:
+      - 9000:80
+    working_dir: /usr/local/apache2/htdocs/
+    volumes:
+      - type: bind
+        source: ./app
+        target: /var/www/html
+      - type: bind
+        source: <MOUNTED_VIDEO_ROOT>
+        target: /usr/local/apache2/htdocs/Videos/
+    environment:
+      - ACCESS_KEY=<SITE_ACCESS_KEY>
+      - VIDEO_ROOT=<SERVER_VIDEO_ROOT>
+      - AUTHENTICATED_CODE=<AUTHENTICATED_CODE>
