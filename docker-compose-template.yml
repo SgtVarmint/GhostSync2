@@ -1,6 +1,6 @@
 services:
   app:
-    image: httpd
+    image: php:8.0-apache
     ports:
       - 9000:80
     working_dir: /usr/local/apache2/htdocs/
