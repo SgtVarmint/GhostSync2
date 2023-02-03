@@ -7,7 +7,7 @@
 	<!--Dependencies-->
 	<!--Desktop Styles-->
 	<!--Old min-width: 992px-->
-	<link rel="stylesheet" href="/NewStyles.css" />
+	<link rel="stylesheet" href="/lobby.css" />
 	<link rel="stylesheet" href="/components/loader/loader.css"/>
 
 	<!-- <script src="/config.js"></script>
@@ -58,12 +58,13 @@
 		<input type="hidden" id="pushUpdate" value="0"></input>
 		<input type="hidden" id="selectedUser" value="0"></input>
 		<span id="hideButtonContainer">
-			<img id="hideButton" src="/graphics/HideButton.png">
+			<!--I have no idea what this is / im not styling it now-->
+			<img id="hideButton" src="/graphics/HideButton.png" style = "display: none;">
 		</span>
-
-		<span id="hideButtonRightContainer" class="hideButtonRightContainerClosed">
+		<span id="hideButtonRightContainer" class="hideButtonRightContainerClosed" style = "display: none;">
 			<img id="hideButtonRight" src="/graphics/HideButtonLong.png">
 		</span>
+		<!--end-->
 
 		<div id="backgroundFade"></div>
 
@@ -79,8 +80,9 @@
 
 		<h3 id="nowPlaying" class="nowPlayingDesktop">Nothing Is Playing Yet..</h3>
 
-		<div id="player" class="playerDesktop">
-			<div id="reactionMenuContainer">
+		<div id="playerWrapper" class="playerDesktop">
+			<!--I have no idea what this is / im not styling it now-->
+			<div id="reactionMenuContainer" style="display: none;">
 				<div id="reactionMenuTop">
 					<div id="reactionMenuTopLeft">
 						<button id="reactionMenuFavoritesButton">Favorites</span>
@@ -95,17 +97,19 @@
 				<div id="reactionMenuAll"></div>
 			</div>
 			<div id="reactionPanel"></div>
+			<!--end-->
 			<video id="video" class="videoDesktop videoStandardScreen" preload="auto" controls>
 				<source id="videoSource">
 			</video>
+			<!--I have no idea what this is / im not styling it now-->
 			<div id="youtubePlayer" class="youtubeStandardScreen">
-
+				<!--why have this, its an empty div-->
 			</div>
-
+			
 			<div id="subtitleWrapper">
 				<div id="subtitleText" class="subtitleTextStandardScreen"></div>
 			</div>
-
+			<!--end-->
 			<div class="reactionWrapper">
 				<button id="reactionButton" class="controls">&#x1F636;</button>
 				<button id="playButton" class="controls playButtonPaused">&#x25b6;</button>
@@ -137,6 +141,7 @@
 						</div>
 					</div>
 				</div>
+				
 				<div id="userListContainer">
 					<ul id="userList">
 
