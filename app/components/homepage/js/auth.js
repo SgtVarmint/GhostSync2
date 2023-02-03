@@ -13,7 +13,7 @@ const authenticate = async () =>
 {
     let params = new FormData;
     params.append('accessCode', byID('authText').value);
-    const response = await fetch('/components/homepage/php/authentication.php', 
+    const response = await fetch('/components/authentication/php/authentication.php', 
     {
         method: 'POST',
         body: params
