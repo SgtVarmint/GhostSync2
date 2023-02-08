@@ -1,19 +1,19 @@
 const toggleAuthField = () => 
 {
-    byID('auth').classList.toggle('hidden');
+    byID('authMenu').classList.toggle('hidden');
     byID('authText').focus();
 }
 
 const defocusAuthInput = () => 
 {
-    byID('auth').classList.add('hidden');
+    byID('authMenu').classList.toggle('hidden');
 }
 
 const authenticate = async () =>
 {
     let params = new FormData;
     params.append('accessCode', byID('authText').value);
-    const response = await fetch('/components/homepage/php/authentication.php', 
+    const response = await fetch('/components/authentication/php/authentication.php', 
     {
         method: 'POST',
         body: params

@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />-->
+	<title>GhostSync: Synchronize Video Watching</title>
+
+	<link rel="stylesheet" href="index.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+	<script src="/Scripts/theme-change.js"></script>
+	<script src="/Scripts/AuthSlider.js"></script>
+	<script src="components/homepage/js/home.js"></script>
+	<script src="components/homepage/js/user.js"></script>
+	<script src="components/homepage/js/auth.js"></script>
+	<script src="components/toast/js/toast.js"></script>
+</head>
+
+<body>
+	<div id="mainWrapper">
+		<div id="joinArea">
+			<div id="joinBox">
+				<div id="header">
+					<h1 class=title>GhostSync</h1>
+					<p class="sub_Text">Enter a lobby name and your Username</p>
+				</div>
+
+				<div id="nameLobby">
+					<p>Lobby:</p>
+					<input type="text" id="lobbyInput" placeholder="Lobby ID">
+				</div>
+
+				<div id="userLobby">
+					<p>Username: </p>
+					<input type="text" id="userInput" placeholder="Username">
+				</div>
+
+				<div id="authMenu" class="hidden">
+
+					<div id="authInside">
+						<p>Authentication Key:</p>
+						<span id="authTip" class="toolTip">
+						</span>&nbsp;
+						<input id="authText" type="text"  placeholder="Authentication Key"></input>
+						<button class="button" id="authButton">Set</button>
+					</div>
+				</div>
+
+				<button id="lobbyButton" class="button createJoinButton">Create/Join</button>
+				<button id="authMenuButton" class="button setAuthButton" style="display: inline-;">Set Authentication Key</button>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div id="buildInfo">
+		<span class="label">GhostSync Version <span class="label" id="versionNumber">XXX</span>
+			<!--&nbsp;deployed on <span id="buildDate">XXX</span>-->
+	</div>
+
+</body>
+</html>

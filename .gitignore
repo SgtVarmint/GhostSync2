@@ -1,1 +1,3 @@
-.acc
+app/data/
+app/lobbies/
+docker-compose.yml
