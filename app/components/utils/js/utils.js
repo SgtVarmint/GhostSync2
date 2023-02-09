@@ -13,3 +13,12 @@ const getCookie = (cookieName) => {
 const setHeader = (header, value) => {
     this.headers.set(header, value);   
 }
+
+const changeTheme = () => {
+    var root = document.querySelector(':root')
+
+    var rootStyles = getComputedStyle(root)
+    var mainColor = rootStyles.getPropertyValue('--primary')
+    console.log("main color = ", mainColor)
+    root.style.setProperty('--primary', '#3D315B')
+}
