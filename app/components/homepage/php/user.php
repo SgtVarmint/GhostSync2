@@ -22,7 +22,6 @@ function addNewUserId(string $username) : int
     } while(in_array($userId, $userIds));
 
     $userIdList[$userId] = $username;
-    print_r(json_encode($userIdList));
     file_put_contents(DATA_FILE_PATH, json_encode($userIdList));
     
     return $userId;

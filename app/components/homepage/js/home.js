@@ -42,18 +42,22 @@ const lobbyButtonClick = () =>
     let lobbyName = byID('lobbyInput').value;
     let userName = formatUsername(byID('userInput').value);
 
-    document.cookie = 'lobbyName=' + lobbyName;
-    document.cookie = 'userName=' + userName;
+    document.cookie = `lobbyName=${lobbyName}`;
+    document.cookie = `userName=${userName}`;
 
-    if(getCookie('userId') === null) 
+    if(!getCookie('userId')) 
     {
-        // addUserToList(byID('userInput').value)
-        // .then((response) => {return response.json()})
-        // .catch(e => {console.log(e)});
+        addUserToList(byID('userInput').value)
+        .then((response) => {return response.json()})
+        .then((response) => {document.cookie = `userId=${response.userId}`});
     }
 
-    window.location = 'components/lobby/lobby.html';
+    setTimeout(() => {document.location = 'components/lobby/lobby.html'}, 50);
 }
+
+// const sanitize = (value)  => {
+
+// }
 
 /**
  * It might be better to move this into a function that strips characters from all input, since there are a couple other places where user input is taken
