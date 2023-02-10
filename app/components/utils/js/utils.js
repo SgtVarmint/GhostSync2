@@ -10,10 +10,6 @@ const getCookie = (cookieName) => {
     }
 }
 
-const setHeader = (header, value) => {
-    this.headers.set(header, value);   
-}
-
 const changeTheme = () => {
     var root = document.querySelector(':root')
 
