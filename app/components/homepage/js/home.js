@@ -47,12 +47,12 @@ const lobbyButtonClick = () =>
 
     if(!getCookie('userId')) 
     {
-        addUserToList(byID('userInput').value)
+        addUserToList(lobbyName, userName)
         .then((response) => {return response.json()})
         .then((response) => {document.cookie = `userId=${response.userId}`});
     }
 
-    setTimeout(() => {document.location = 'components/lobby/lobby.html'}, 50);
+    setTimeout(() => {document.location = 'components/lobby/lobby.html'}, 20);
 }
 
 // const sanitize = (value)  => {

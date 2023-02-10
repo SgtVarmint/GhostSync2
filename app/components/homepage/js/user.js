@@ -1,8 +1,9 @@
-const addUserToList = async (userInput) => 
+const addUserToList = async (lobbyName, userName) => 
 {
     let params = new FormData;
-    params.append('username', userInput);
-    const response = await fetch('/components/homepage/php/user.php', {
+    params.append('lobbyName', lobbyName);
+    params.append('userName', userName);
+    const response = await fetch('/components/user/php/addNewUserId.php', {
         method: 'POST',
         body: params
     });
