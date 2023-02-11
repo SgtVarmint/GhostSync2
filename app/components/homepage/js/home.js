@@ -47,7 +47,7 @@ const lobbyButtonClick = () =>
 
     if(!getCookie('userId')) 
     {
-        addUserToList(lobbyName, userName)
+        addUserToList(lobbyName.toUpperCase(), userName)
         .then((response) => {return response.json()})
         .then((response) => {document.cookie = `userId=${response.userId}`});
     }
