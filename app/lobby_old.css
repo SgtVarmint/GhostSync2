@@ -26,7 +26,16 @@ a {
     color: var(--light_Yellow);
 }
 /* New styles below this point*/
-
+.mainDesktop{
+    height: 100vh;
+    background-color: var(--light_purple);
+}
+/* Top Nav*/
+#topNav{
+    padding: 2%;
+    background-color: var(--dark_Blue) !important;
+    text-align: center;
+}
 a[class *= Button]{
         color: black;
         background-image: linear-gradient(to left, var(--yellow), var(--light_Yellow));
@@ -38,33 +47,50 @@ a[class *= Button]{
         cursor: pointer;
     
 }
-
-#main_wrapper
-{
-    background-color: var(--dark_blue);
+.divider{
+    border: #f8be52 2px solid;
+    min-height: 100px;
 }
-
-#player_wrapper
-{
-
-}
-
-#local_video_wrapper
-{
+/* video Player*/
+#playerWrapper{
+    width: 60%;
+    float: left;
 
 }
 
-#local_video_element
-{
-
+#video{
+    margin: 2% 0% 0 0;
+    width: 60vw;
 }
 
-#controls_wrapper
-{
-
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
 }
 
-#side_panel_wrapper
-{
+/* Reactions*/
+.reactionWrapper{
+    width: 60vw;
+    text-align: center;
+    height: 3em;
     
+    
+}
+.controls{
+    min-height: 3em;
+    min-width: 3em;
+    background-color: #ffffff00;
+   border: #00000057 1px solid;
+   cursor: pointer;
+}
+#seekSlider{
+    min-width: 60vw;
+   margin: 2% 0%;
+}
+
+
+.userqueueWrapper{
+display: flex;
+width: auto;
+
 }

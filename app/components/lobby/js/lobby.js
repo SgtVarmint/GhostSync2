@@ -1,6 +1,13 @@
+//include() method will add the resource to the page as <script> or <link> tag
+include("/components/icons/icons.js");
+include("/components/utils/js/utils.js");
+include("/components/players/controls.js");
+include("/components/players/players.js");
+include("/lobby.css");
+
 const init = () => 
 {
-
+	
 }
 
 const authenticate = () =>
