@@ -52,7 +52,7 @@ const lobbyButtonClick = () =>
         .then((response) => {document.cookie = `userId=${response.userId}`});
     }
 
-    setTimeout(() => {document.location = 'components/lobby/lobby.html'}, 200);
+    setTimeout(() => {document.location = 'public/lobby.html'}, 200);
 }
 
 // const sanitize = (value)  => {

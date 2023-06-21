@@ -7,9 +7,13 @@
 	<!--Dependencies-->
 	<!--Desktop Styles-->
 	<!--Old min-width: 992px-->
-	<link rel="stylesheet" href="../../lobby.css" />
-	<link rel="stylesheet" href="/components/loader/loader.css"/>
+	<link rel="stylesheet" href="/public/css/lobby.css"/>
+	<link rel="stylesheet" href="/public/css/toast.css"/>
 
+	<script src="/public/js/utils/settings.js"></script>
+	<script src="/public/js/utils/utils.js"></script>
+	<script src="/public/js/lobby/lobby.js"></script>
+	<script src="/public/js/toast/toast.js"></script>
 	<!-- <script src="/config.js"></script>
 	<script src="/libraryRoot.js"></script>
 	<script src="/components/metadata/metadata.js"></script>
@@ -21,7 +25,6 @@
 	<script src="/components/loader/loader.js"></script>
 	<script src="/components/toast/toast.js"></script>
 	<script src="/components/controls/controls.js"></script>
-	<script src="/components/settings/settings.js"></script>
 	<script src="/components/youtube/youtube.js"></script>
 	<script src="/components/tooltips/tooltips.js"></script>
 	<script src="/components/authentication/authentication.js"></script>
@@ -75,7 +78,7 @@
 			<span class="divider"></span>
 			<a id="youtubeButton" class="navButton" href="javascript:youtubeButton();">Youtube</a>
 			<span class="divider"></span>
-			<a id="settingsButton" class="navButton" href="javascript:settingsButton();">Settings</a>
+			<a id="settingsButton" class="navButton">Settings</a>
 		</div>
 
 		<h3 id="nowPlaying" class="nowPlayingDesktop">Nothing Is Playing Yet..</h3>
@@ -181,31 +184,25 @@
 				<button class="defaultButton" id="youtubePlayButton">Play</button>
 			</div>
 		</div>
-		<div id="settings">
+
+		<div id="settings" class="popupWindow_in">
 			<div class="settingSection">
 				<h3>Username&nbsp;<span id="usernameTip" class="toolTip">&#63;</span></h3>
 				<input type="text" id="userNameInput"></input><button id="changeUsernameButton"
 					class="defaultButton">Change
 					Username</button>
-
 			</div>
-
-
 			<hr>
-
 			<div class="settingSection">
 				<h3>Lobby Sounds&nbsp;<span id="soundsTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="lobbySoundsToggle"></input>
 			</div>
-
 			<hr>
-
 			<div class="settingSection">
 				<h3>Reactions&nbsp;<span id="reactionsTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="reactionsToggle"></input>
 			</div>
 			<hr>
-
 			<div class="settingSection">
 				<h3>Sync Tolerance&nbsp;<span id="toleranceTip" class="toolTip">&#63;</span></h3>
 				<input type="range" id="toleranceSlider"></input>
@@ -213,18 +210,14 @@
 					<span id="toleranceValue"></span><span class="label"> second(s)</span>
 				</div>
 			</div>
-
 			<hr>
-
 			<div class="settingSection">
 				<h3>Slow Connection&nbsp;<span id="slowConnectionTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="jimmyToggle"></input>
 			</div>
-
 		</div>
 
 		<div id="debug" style="display:none"></div>
 	</div>
 </body>
-
 </html>

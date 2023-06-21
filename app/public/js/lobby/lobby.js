@@ -1,6 +1,6 @@
 const init = () => 
 {
-
+	byID("settingsButton").onclick = settingsButton;
 }
 
 const authenticate = () =>

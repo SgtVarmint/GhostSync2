@@ -22,6 +22,7 @@ Main css
     --text_op: #f1e5c0a9;
 
 }
+
 h1,h2,h3,h4,h5,p {
     color: var(--text);
 }
@@ -38,6 +39,7 @@ a {
     display: flex !important;
     height: 100vh;
 }
+
 #mainWrapper::before {
     content: "";
     position: absolute;
@@ -51,6 +53,7 @@ a {
     overflow: hidden;
     z-index: -1;
 }
+
 #joinArea{
     background-color: var(--light_blue);
     padding:  2% 0%;
@@ -65,8 +68,8 @@ a {
     max-width: 20em;
     border: var(--yellow) 4px solid;
     z-index: 2;
-    
 }
+
 .hidden{
     display: none;
 }
@@ -75,25 +78,30 @@ a {
     color: var(--text);
     margin: 8% 8%;
 }
+
 #lobbyInput{
     margin: 0% 8%;
     width: 70%;
     height: 40px;
 }
+
 #userLobby{
     color: var(--text);
     margin: 8% 8%;
 }
+
 #userInput{
     margin: 0% 8%;
     width: 70%;
     height: 40px;
 }
+
 #buildInfo{
     position:absolute;
     bottom: 0;
     left: 0;
 }
+
 button{
     background-image: linear-gradient(to left, var(--yellow), var(--light_Yellow));
     text-transform: uppercase;
@@ -107,6 +115,7 @@ button{
 #authMenu{
     margin: 2% 0%;
 }
+
 #authText{
     margin: 0% 8%;
     width: 70%;
