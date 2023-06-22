@@ -1,6 +1,8 @@
 const init = () => 
 {
 	byID("settingsButton").onclick = settingsButton;
+	byID("browserButton").onclick = videoBrowserButton;
+	byID("youtubeButton").onclick = youtubeButton;
 }
 
 const authenticate = () =>
@@ -27,6 +29,41 @@ const authenticate = () =>
 		}
 	}
 	xhttp.send("accessCode=" + localStorage.getItem("access"));
+}
+
+const closeMenu = (element) => 
+{
+	disableBackgroundFade();
+		setTimeout(function(){ 
+			element.style.display = "none";
+			enablePointerEventsInMenus();
+			}, 200);
+		element.className = "popupWindow_out";
+		
+		disablePointerEventsInMenus();
+		resetNavButtons();
+}
+
+const openMenu = (element) => 
+{
+	let elementButton = byID(element.id+'Button');
+
+	enableBackgroundFade();
+	//removeToastMessage();
+	setTimeout(function(){
+		// document.getElementById("browser").style.display = "none";
+		// document.getElementById("youtubeMenu").style.display = "none";
+		enablePointerEventsInMenus();
+	}, 200);
+	//document.getElementById("browser").className = "popupWindow_out";
+	//document.getElementById("youtubeMenu").className = "popupWindow_out";
+	element.style.display = "block";
+	element.className = "popupWindow_in";
+	
+	disablePointerEventsInMenus();
+	resetNavButtons();
+	elementButton.innerHTML = "Close";
+	elementButton.style.color = "blue";
 }
 
 window.addEventListener('load', init);

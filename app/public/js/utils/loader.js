@@ -1,9 +1,9 @@
-function openLoader()
+const openLoader = () =>
 {
 	document.getElementById("loader").style.display = "block";
 }
 
-function closeLoader()
+const closeLoader = () =>
 {
 	document.getElementById("loader").style.display = "none";
 }

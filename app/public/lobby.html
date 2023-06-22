@@ -4,9 +4,6 @@
 	<meta charset="utf-8">
 	<!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />-->
 	<title>GhostSync Lobby</title>
-	<!--Dependencies-->
-	<!--Desktop Styles-->
-	<!--Old min-width: 992px-->
 	<link rel="stylesheet" href="/public/css/lobby.css"/>
 	<link rel="stylesheet" href="/public/css/toast.css"/>
 
@@ -14,16 +11,18 @@
 	<script src="/public/js/utils/utils.js"></script>
 	<script src="/public/js/lobby/lobby.js"></script>
 	<script src="/public/js/toast/toast.js"></script>
+	<script src="/public/js/video/videoBrowser.js"></script>
+	<script src="/public/js/youtube/youtube.js"></script>
+
 	<!-- <script src="/config.js"></script>
 	<script src="/libraryRoot.js"></script>
 	<script src="/components/metadata/metadata.js"></script>
 	<script src="/components/browser/browserFeatures.js"></script>
-	<script src="/components/lobby/videoBrowserControl.js"></script>
+	
 	<script src="/components/lobby/onload.js"></script>
 	<script src="/components/lobby/videoSyncControl.js"></script>
 	<script src="/components/user/userControl.js"></script>
 	<script src="/components/loader/loader.js"></script>
-	<script src="/components/toast/toast.js"></script>
 	<script src="/components/controls/controls.js"></script>
 	<script src="/components/youtube/youtube.js"></script>
 	<script src="/components/tooltips/tooltips.js"></script>
@@ -74,9 +73,9 @@
 		<div id="topNav">
 			<a class="navButton" href="/index.html" id="home">GhostSync</a>
 			<span class="divider"></span>
-			<a id="videoBrowserButton" class="navButton" href="javascript:videoBrowserButton();">Video Browser</a>
+			<a id="browserButton" class="navButton">Video Browser</a>
 			<span class="divider"></span>
-			<a id="youtubeButton" class="navButton" href="javascript:youtubeButton();">Youtube</a>
+			<a id="youtubeButton" class="navButton">Youtube</a>
 			<span class="divider"></span>
 			<a id="settingsButton" class="navButton">Settings</a>
 		</div>
@@ -172,7 +171,7 @@
 			<div id="videoBrowser"></div>
 			<div id="videoBrowserSidePanel"></div>
 		</div>
-		<div id="youtubeMenu">
+		<div id="youtube">
 			<div class="youtubeMenuElement">
 				<span class="textTitle">YouTube Link</span>
 			</div>

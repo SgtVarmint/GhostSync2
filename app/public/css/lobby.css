@@ -144,6 +144,64 @@ video::-webkit-media-controls-panel {
 /* 
 *________________________________________________________________________________________________________
 *                                                                                                      |
+*                                   youtube                                                    |
+*________________________________________________________________________________________________________|
+*/
+#youtube {
+    display: none;
+    position: fixed;
+    background: rgba(79, 79, 79, 0.85);
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 4% 2% 1% 1%;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: auto;
+    height: auto;
+    margin-top: 0px;
+    z-index: 100;
+}
+
+#youtube span,
+#youtube input,
+#youtube button {
+    font-size: 2em;
+    display: inline-block;
+    clear: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+#youtube input {
+    /*width: 40%;
+    margin: 10px;*/
+    font-size: 1.5em;
+}
+
+#youtube button {
+    /*width: 10%;
+    margin: 10px;*/
+    font-size: 1.5em;
+}
+
+.youtube_standardscreen
+{
+    height: 680px;
+}
+
+.youtube_fullscreen
+{
+    height: 99%;
+}
+
+/* 
+*________________________________________________________________________________________________________
+*                                                                                                      |
 *                                    KeyFrames                                                     |
 *________________________________________________________________________________________________________|
 */
