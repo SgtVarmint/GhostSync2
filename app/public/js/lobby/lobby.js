@@ -3,6 +3,7 @@ const init = () =>
 	byID("settingsButton").onclick = settingsButton;
 	byID("browserButton").onclick = videoBrowserButton;
 	byID("youtubeButton").onclick = youtubeButton;
+	byID("playButton").onclick = playButtonClicked
 }
 
 const authenticate = () =>
@@ -64,6 +65,10 @@ const openMenu = (element) =>
 	resetNavButtons();
 	elementButton.innerHTML = "Close";
 	elementButton.style.color = "blue";
+}
+
+const playButtonClicked = () => {
+	send(byID("video").paused ? "playVideo" : "pauseVideo");
 }
 
 window.addEventListener('load', init);
