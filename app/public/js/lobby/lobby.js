@@ -1,6 +1,9 @@
 const init = () => 
 {
-
+	byID("settingsButton").onclick = settingsButton
+	byID("browserButton").onclick = videoBrowserButton
+	byID("youtubeButton").onclick = youtubeButton
+	byID("playButton").onclick = playButtonClicked
 }
 
 const authenticate = () =>
@@ -29,4 +32,58 @@ const authenticate = () =>
 	xhttp.send("accessCode=" + localStorage.getItem("access"));
 }
 
-window.addEventListener('load', init);
+const closeMenu = (element) => 
+{
+	disableBackgroundFade();
+		setTimeout(function(){ 
+			element.style.display = "none";
+			enablePointerEventsInMenus();
+			}, 200);
+		element.className = "popupWindow_out";
+		
+		disablePointerEventsInMenus();
+		resetNavButtons();
+}
+
+const openMenu = (element) => 
+{
+	let elementButton = byID(element.id+"Button");
+
+	enableBackgroundFade();
+	//removeToastMessage();
+	setTimeout(function(){
+		// document.getElementById("browser").style.display = "none";
+		// document.getElementById("youtubeMenu").style.display = "none";
+		enablePointerEventsInMenus();
+	}, 200);
+	//document.getElementById("browser").className = "popupWindow_out";
+	//document.getElementById("youtubeMenu").className = "popupWindow_out";
+	element.style.display = "block";
+	element.className = "popupWindow_in";
+	
+	disablePointerEventsInMenus();
+	resetNavButtons();
+	elementButton.innerHTML = "Close";
+	elementButton.style.color = "blue";
+}
+
+const playButtonClicked = () => {
+	send(byID("video").paused ? "playVideo;" + btoa(localStorage.getItem("lobbyName")) : "pauseVideo");
+}
+
+const updateUserList = (payload) => {
+	clearUserList();
+	for (let userName of payload) {
+		var userListItem = document.createElement("li");
+
+		userListItem.innerHTML = "<span style='font-style: bolder; color: green'>&#8226;</span>" + userName;
+		byID("userList").appendChild(userListItem)
+	}
+}
+
+const clearUserList = () => {
+	let userList = byID("userList")
+	userList.innerHTML = ""
+}
+
+window.addEventListener("load", init);

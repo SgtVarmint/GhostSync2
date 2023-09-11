@@ -1,8 +1,8 @@
 const init = () =>
 {
-    byID('lobbyInput').value = getCookie('lobbyName') ?? '';
-    byID('userInput').value = getCookie('userName') ?? '';
-    byID('authText').value = getCookie('accessKey') ?? '';
+    byID('lobbyInput').value = getLocalItem('lobbyName') ?? '';
+    byID('userInput').value = getLocalItem('userName') ?? '';
+    byID('authText').value = getLocalItem('accessKey') ?? '';
 
     setKeyEvents();
 
@@ -42,17 +42,17 @@ const lobbyButtonClick = () =>
     let lobbyName = byID('lobbyInput').value;
     let userName = formatUsername(byID('userInput').value);
 
-    document.cookie = `lobbyName=${lobbyName}`;
-    document.cookie = `userName=${userName}`;
+    localStorage.setItem("lobbyName", lobbyName.toUpperCase());
+    localStorage.setItem("userName", userName);
 
-    if(!getCookie('userId')) 
+    if(!getLocalItem('userId')) 
     {
         addUserToList(lobbyName.toUpperCase(), userName)
         .then((response) => {return response.json()})
-        .then((response) => {document.cookie = `userId=${response.userId}`});
+        .then((response) => {"userId", response.userId});
     }
 
-    setTimeout(() => {document.location = 'components/lobby/lobby.html'}, 200);
+    setTimeout(() => {document.location = 'public/lobby.html'}, 200);
 }
 
 // const sanitize = (value)  => {

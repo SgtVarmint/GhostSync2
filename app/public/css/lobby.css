@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 0.12em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+
+:root {
+    --light_purple: #35018a7e;
+    --yellow: #f8be52;
+    --light_Yellow: #fbcf86;
+    --dark_Blue: #0000008f;
+    --light_blue: #00509b42;
+    --text: #f1e5c0;
+    --text_op: #f1e5c0a9;
+
+}
+
+h1,h2,h3,h4,h5,p,a {
+    color: var(--text);
+}
+
+a {
+    color: var(--light_Yellow);
+}
+
+/* New styles below this point*/
+.mainDesktop {
+    height: 100vh;
+    background-color: var(--light_purple);
+}
+
+/* Top Nav*/
+#topNav {
+    padding: 2%;
+    background-color: var(--dark_Blue) !important;
+    text-align: center;
+}
+
+a[class *= Button] {
+    color: black;
+    background-image: linear-gradient(to left, var(--yellow), var(--light_Yellow));
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border-radius: 50px;
+    margin: 2%;
+    align-items: center;
+    cursor: pointer;
+}
+
+.divider {
+    border: #f8be52 2px solid;
+    min-height: 100px;
+}
+
+/* video Player*/
+#playerWrapper {
+    width: 60%;
+    float: left;
+}
+
+#video {
+    margin: 2% 0 0;
+    width: 60vw;
+}
+
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;
+}
+
+/* Reactions*/
+.reactionWrapper {
+    width: 60vw;
+    text-align: center;
+    height: 3em;
+}
+
+.controls {
+    min-height: 3em;
+    min-width: 3em;
+    background-color: #ffffff00;
+    border: #00000057 1px solid;
+    cursor: pointer;
+}
+
+#seekSlider {
+    min-width: 60vw;
+    margin: 2% 0;
+}
+
+.userqueueWrapper {
+    display: flex;
+    width: auto;
+}
+
+.setting_section {
+    margin: 2%;
+}
+
+#settings h3 {
+    font-size: 1.5em;
+}
+
+#changeUsernameButton {
+    margin: 0 2%;
+}
+
+#settings {
+    display: none;
+    position: fixed;
+    background: rgba(79, 79, 79, 0.85);
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: auto;
+    height: 70%;
+    margin-top: 0;
+    z-index: 100;
+}
+
+#settings a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    padding: 5px;
+}
+
+#settings input {
+    font-size: 2em;
+}
+
+#settings button {
+    padding: 5px;
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
+/* 
+*________________________________________________________________________________________________________
+*                                                                                                      |
+*                                   youtube                                                    |
+*________________________________________________________________________________________________________|
+*/
+#youtube {
+    display: none;
+    position: fixed;
+    background: rgba(79, 79, 79, 0.85);
+    border-radius: 5px;
+    border: 1px solid white;
+    padding: 4% 2% 1% 1%;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    overflow: auto;
+    height: auto;
+    margin-top: 0px;
+    z-index: 100;
+}
+
+#youtube span,
+#youtube input,
+#youtube button {
+    font-size: 2em;
+    display: inline-block;
+    clear: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    transform: translateY(-50%);
+}
+
+#youtube input {
+    /*width: 40%;
+    margin: 10px;*/
+    font-size: 1.5em;
+}
+
+#youtube button {
+    /*width: 10%;
+    margin: 10px;*/
+    font-size: 1.5em;
+}
+
+.youtube_standardscreen
+{
+    height: 680px;
+}
+
+.youtube_fullscreen
+{
+    height: 99%;
+}
+
+/* 
+*________________________________________________________________________________________________________
+*                                                                                                      |
+*                                    KeyFrames                                                     |
+*________________________________________________________________________________________________________|
+*/
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: .4;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: .4;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes popup-in {
+    from {
+        opacity: 0;
+        top: 0;
+    }
+
+    to {
+        opacity: 1;
+        top: 15%;
+    }
+}
+
+@keyframes popup-out {
+    from {
+        opacity: 1;
+        top: 15%;
+    }
+
+    to {
+        opacity: 0;
+        top: 0;
+    }
+}
+
+@keyframes popup-in-left {
+    from {
+        opacity: 0;
+        left: 100%;
+    }
+
+    to {
+        opacity: .98;
+        left: 0;
+    }
+}
+
+@keyframes popup-out-left {
+    from {
+        opacity: .98;
+        left: 0;
+    }
+
+    to {
+        opacity: 0;
+        left: 100%;
+    }
+}
+
+.fade_in {
+    animation-name: fade-in;
+    animation-duration: 0.3s;
+}
+
+.fade_out {
+    animation-name: fade-out;
+    animation-duration: 0.3s;
+}
+
+.popupWindow_in {
+    animation-name: popup-in;
+    animation-duration: 0.3s;
+}
+
+.popupWindow_out {
+    animation-name: popup-out;
+    animation-duration: 0.3s;
+}

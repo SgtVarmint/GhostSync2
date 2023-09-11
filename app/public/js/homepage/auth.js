@@ -37,7 +37,7 @@ const checkAuthorization = (response) =>
         toastMessage("Successfully Authenticated", 2, "body", "5%", "13%", "13%", "0");
         byID('lobbyButton').disabled = false;
         byID('lobbyButton').onclick = lobbyButtonClick;
-        document.cookie = 'accessKey=' + byID('authText').value;
+        localStorage.setItem('accessKey', byID('authText').value);
     }
 };
 

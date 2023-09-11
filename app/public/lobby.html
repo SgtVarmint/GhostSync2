@@ -4,24 +4,26 @@
 	<meta charset="utf-8">
 	<!--<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />-->
 	<title>GhostSync Lobby</title>
-	<!--Dependencies-->
-	<!--Desktop Styles-->
-	<!--Old min-width: 992px-->
-	<link rel="stylesheet" href="../../lobby.css" />
-	<link rel="stylesheet" href="/components/loader/loader.css"/>
+	<link rel="stylesheet" href="/public/css/lobby.css"/>
+	<link rel="stylesheet" href="/public/css/toast.css"/>
+
+	<script src="/public/js/utils/settings.js"></script>
+	<script src="/public/js/utils/utils.js"></script>
+	<script src="/public/js/lobby/lobby.js"></script>
+	<script src="/public/js/toast/toast.js"></script>
+	<script src="/public/js/video/videoBrowser.js"></script>
+	<script src="/public/js/youtube/youtube.js"></script>
+	<script src="/public/js/websockets/websocket.js"></script>
 
 	<!-- <script src="/config.js"></script>
-	<script src="/libraryRoot.js"></script>
 	<script src="/components/metadata/metadata.js"></script>
 	<script src="/components/browser/browserFeatures.js"></script>
-	<script src="/components/lobby/videoBrowserControl.js"></script>
+	
 	<script src="/components/lobby/onload.js"></script>
 	<script src="/components/lobby/videoSyncControl.js"></script>
 	<script src="/components/user/userControl.js"></script>
 	<script src="/components/loader/loader.js"></script>
-	<script src="/components/toast/toast.js"></script>
 	<script src="/components/controls/controls.js"></script>
-	<script src="/components/settings/settings.js"></script>
 	<script src="/components/youtube/youtube.js"></script>
 	<script src="/components/tooltips/tooltips.js"></script>
 	<script src="/components/authentication/authentication.js"></script>
@@ -41,8 +43,7 @@
 	<script src="/components/validation/validation.js"></script>
 	<script src="/components/compression/slowNetwork.js"></script>
 	<script src="/components/adskip/adskip.js"></script>
-	<script src="/components/subtitles/subtitles.js"></script>
-	<script src="/components/lobby/whoami.js"></script> -->
+	<script src="/components/subtitles/subtitles.js"></script>-->
 
 </head>
 
@@ -71,11 +72,11 @@
 		<div id="topNav">
 			<a class="navButton" href="/index.html" id="home">GhostSync</a>
 			<span class="divider"></span>
-			<a id="videoBrowserButton" class="navButton" href="javascript:videoBrowserButton();">Video Browser</a>
+			<a id="browserButton" class="navButton">Video Browser</a>
 			<span class="divider"></span>
-			<a id="youtubeButton" class="navButton" href="javascript:youtubeButton();">Youtube</a>
+			<a id="youtubeButton" class="navButton">Youtube</a>
 			<span class="divider"></span>
-			<a id="settingsButton" class="navButton" href="javascript:settingsButton();">Settings</a>
+			<a id="settingsButton" class="navButton">Settings</a>
 		</div>
 
 		<h3 id="nowPlaying" class="nowPlayingDesktop">Nothing Is Playing Yet..</h3>
@@ -169,7 +170,7 @@
 			<div id="videoBrowser"></div>
 			<div id="videoBrowserSidePanel"></div>
 		</div>
-		<div id="youtubeMenu">
+		<div id="youtube">
 			<div class="youtubeMenuElement">
 				<span class="textTitle">YouTube Link</span>
 			</div>
@@ -181,31 +182,25 @@
 				<button class="defaultButton" id="youtubePlayButton">Play</button>
 			</div>
 		</div>
-		<div id="settings">
+
+		<div id="settings" class="popupWindow_in">
 			<div class="settingSection">
 				<h3>Username&nbsp;<span id="usernameTip" class="toolTip">&#63;</span></h3>
 				<input type="text" id="userNameInput"></input><button id="changeUsernameButton"
 					class="defaultButton">Change
 					Username</button>
-
 			</div>
-
-
 			<hr>
-
 			<div class="settingSection">
 				<h3>Lobby Sounds&nbsp;<span id="soundsTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="lobbySoundsToggle"></input>
 			</div>
-
 			<hr>
-
 			<div class="settingSection">
 				<h3>Reactions&nbsp;<span id="reactionsTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="reactionsToggle"></input>
 			</div>
 			<hr>
-
 			<div class="settingSection">
 				<h3>Sync Tolerance&nbsp;<span id="toleranceTip" class="toolTip">&#63;</span></h3>
 				<input type="range" id="toleranceSlider"></input>
@@ -213,18 +208,14 @@
 					<span id="toleranceValue"></span><span class="label"> second(s)</span>
 				</div>
 			</div>
-
 			<hr>
-
 			<div class="settingSection">
 				<h3>Slow Connection&nbsp;<span id="slowConnectionTip" class="toolTip">&#63;</span></h3>
 				<input type="checkbox" id="jimmyToggle"></input>
 			</div>
-
 		</div>
 
 		<div id="debug" style="display:none"></div>
 	</div>
 </body>
-
 </html>
