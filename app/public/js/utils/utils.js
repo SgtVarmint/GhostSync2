@@ -1,13 +1,7 @@
 const byID = (elementName) => { return document.getElementById(elementName); }
 
-const getCookie = (cookieName) => {
-    let cookieList = document.cookie.split('; ');
-
-    try {
-        return cookieList.find((row)=>row.startsWith(cookieName)).split('=')[1];
-    } catch {
-        return null;
-    }
+const getLocalItem = (keyName) => {
+    return localStorage.getItem(keyName)
 }
 
 const changeTheme = () => {

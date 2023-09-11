@@ -1,8 +1,8 @@
 const init = () => 
 {
-	byID("settingsButton").onclick = settingsButton;
-	byID("browserButton").onclick = videoBrowserButton;
-	byID("youtubeButton").onclick = youtubeButton;
+	byID("settingsButton").onclick = settingsButton
+	byID("browserButton").onclick = videoBrowserButton
+	byID("youtubeButton").onclick = youtubeButton
 	byID("playButton").onclick = playButtonClicked
 }
 
@@ -47,7 +47,7 @@ const closeMenu = (element) =>
 
 const openMenu = (element) => 
 {
-	let elementButton = byID(element.id+'Button');
+	let elementButton = byID(element.id+"Button");
 
 	enableBackgroundFade();
 	//removeToastMessage();
@@ -68,7 +68,22 @@ const openMenu = (element) =>
 }
 
 const playButtonClicked = () => {
-	send(byID("video").paused ? "playVideo" : "pauseVideo");
+	send(byID("video").paused ? "playVideo;" + btoa(localStorage.getItem("lobbyName")) : "pauseVideo");
 }
 
-window.addEventListener('load', init);
+const updateUserList = (payload) => {
+	clearUserList();
+	for (let userName of payload) {
+		var userListItem = document.createElement("li");
+
+		userListItem.innerHTML = "<span style='font-style: bolder; color: green'>&#8226;</span>" + userName;
+		byID("userList").appendChild(userListItem)
+	}
+}
+
+const clearUserList = () => {
+	let userList = byID("userList")
+	userList.innerHTML = ""
+}
+
+window.addEventListener("load", init);
