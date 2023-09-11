@@ -36,16 +36,21 @@ socket.onmessage = (event) => {
         case "skip":
             //TODO: Implement skip function
             break
-        case "userConnect":
+        case "userConnect": case "userDisconnect":
             updateUserList(eventObj.Users)
-            break
-        case "userDisconnect":
-            //TODO: Implement userDisconnect
             break
     }
 }
 
 socket.onclose = () => {
     console.log("Connection closed")
-    send("userDisconnect;" + btoa(localStorage.getItem("lobbyName")))
+}
+
+onbeforeunload = (event) => {
+    userDisonnectObj = {
+        'event': 'userDisconnect',
+        'lobby_name': btoa(getLocalItem('lobbyName')),
+        'data': [getLocalItem('userName')]
+    };
+    send(JSON.stringify(userDisonnectObj))
 }
